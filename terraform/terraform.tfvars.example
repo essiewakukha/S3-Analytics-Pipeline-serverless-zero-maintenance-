@@ -1,0 +1,10 @@
+# Copy to terraform.tfvars and adjust.
+aws_region   = "us-east-1"
+project_name = "cw-metrics-pipeline"
+
+# Namespace-level filters only. New metrics in these namespaces are picked up automatically.
+# Use [] to stream every namespace.
+include_namespaces = ["PortfolioDemo/Services", "AWS/Lambda", "AWS/ApplicationELB"]
+
+firehose_buffer_seconds = 60
+# alarm_sns_topic_arn   = "arn:aws:sns:us-east-1:111122223333:ops-alerts"
